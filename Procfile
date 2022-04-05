@@ -1,2 +1,2 @@
 web: gunicorn --pythonpath multi_vendor multi_vendor.wsgi
-release: python manage.py migrate
+release: python multi_vendor/manage.py migrate
