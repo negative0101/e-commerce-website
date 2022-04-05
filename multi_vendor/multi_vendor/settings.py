@@ -59,10 +59,10 @@ WSGI_APPLICATION = 'multi_vendor.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'shop',
-        'USER': 'postgres',
-        'PASSWORD': 'admin',
-        'HOST': '127.0.0.1',
+        'NAME': 'd7obasm4lvmjsu',
+        'USER': 'hprartgirtsxjj',
+        'PASSWORD': 'b41f073d2eec16a24e5903871021d5df4f1a83b362aed8aa244d026d669e306c',
+        'HOST': 'ec2-34-247-72-29.eu-west-1.compute.amazonaws.com',
         'PORT': '5432',
     }
 }
