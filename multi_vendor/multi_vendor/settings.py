@@ -8,7 +8,7 @@ SECRET_KEY = 'django-insecure-nz!c_oe3n7c^cm@7s%7tt8qd*p3$4l0aixdop2i#woicqww710
 DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1',
-                 'bigblackpussy.herokuapp.com',]
+                 'bigblackpussy.herokuapp.com', ]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -92,24 +92,18 @@ USE_I18N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 BASE_DIR_2 = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
-STATIC_ROOT = os.path.join(BASE_DIR / 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
-
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR_2 , 'static'),
+    os.path.join(BASE_DIR_2, 'static'),
 )
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-
-
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
