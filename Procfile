@@ -1,1 +1,1 @@
-web: gunicorn multi_vendor.wsgi
+web: gunicorn --pythonpath multi_vendor multi_vendor.wsgi
