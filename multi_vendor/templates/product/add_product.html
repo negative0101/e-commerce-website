@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Product {% endblock %}
+
+{% block content %}
+    <h1 class="title has-text-centered">Add Product </h1>
+    <form align="center" method="post" action="." enctype="multipart/form-data">{% csrf_token %}
+    <table>
+
+        {{ form.as_p }}
+        </table>
+
+    <div class="field">
+        <div class="control">
+            <button class = "button is-dark is-uppercase">Submit</button>
+        </div>
+    </div>
+    </form>
+
+{% endblock %}

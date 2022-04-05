@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Vendors{% endblock %}
+
+{% block content %}
+    <h1 class="title has-text-centered">Vendors</h1>
+    <div class="columns is-multiline">
+        {% for vendor in vendors %}
+            <div class="column is-3">
+                <div class="box is-centered">
+                    <h2 class="subtitle has-text-centered">{{ vendor.name }}</h2>
+                    <hr>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="{% url 'vendor' vendor.id %}" class="button is-dark is-uppercase ">View products</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
