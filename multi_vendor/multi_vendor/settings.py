@@ -6,7 +6,8 @@ SECRET_KEY = 'django-insecure-nz!c_oe3n7c^cm@7s%7tt8qd*p3$4l0aixdop2i#woicqww710
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','https://bigblackpussy.herokuapp.com/']
+ALLOWED_HOSTS = ['127.0.0.1',
+                 'bigblackpussy.herokuapp.com',]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
