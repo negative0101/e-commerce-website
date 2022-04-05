@@ -89,10 +89,23 @@ USE_I18N = True
 
 USE_TZ = True
 
-STATIC_URL = 'static/'
-STATICFILES_DIRS = [
-    BASE_DIR / 'static'
-]
+
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/1.9/howto/static-files/
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_URL = '/static/'
+
+# Extra places for collectstatic to find static files.
+STATICFILES_DIRS = (
+    BASE_DIR / 'static',
+)
+
+
+
+
+
+
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STRIPE_PUB_KEY = 'pk_test_51Kf72LBEIIlaEJA21ViEDY0oqQt0FTc5sL1qqmgMQ6h77TTSeBQdkdkh2LaWgEXBhqf4nA498oEsTFqIopcZLnsJ0052OCxxak'
