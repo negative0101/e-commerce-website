@@ -6,12 +6,11 @@ from django import views
 from django.utils.text import slugify
 from django.views.generic import TemplateView, ListView
 
-from .forms import AddToCartForm
+from .forms import AddToCartForm, ProductForm, DeleteProductForm
 from .models import Category, Product
 from ..cart.cart import Cart
 from django.contrib.auth import mixins as auth_mixin
 
-from ..vendor.forms import ProductForm, DeleteProductForm
 
 MESSAGE_FOR_ADDING_PRODUCT_SUCCESS = "Product was added to basket!"
 NUMBER_OF_RANDOM_SIMILAR_ITEMS = 4
@@ -75,7 +74,7 @@ class EditProductView(auth_mixin.LoginRequiredMixin, views.View):
 
         if form.is_valid():
             form.save()
-            return redirect('vendor_admin')
+            return redirect('frontpage')
         return render(request, 'product/edit_product.html', {'form': form, 'product': product})
 
 
