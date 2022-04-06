@@ -1,7 +1,8 @@
 from django.db import models
 
-
 from multi_vendor.vendor.models import Vendor
+
+from cloudinary.models import CloudinaryField
 
 
 class Category(models.Model):
@@ -19,16 +20,15 @@ class Category(models.Model):
 class Product(models.Model):
     category = models.ForeignKey(Category, related_name='products', on_delete=models.CASCADE)
     vendor = models.ForeignKey(Vendor, related_name='products', on_delete=models.CASCADE)
-    title = models.CharField(max_length=255,unique=True)
+    title = models.CharField(max_length=255, unique=True)
     slug = models.SlugField(max_length=255)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
     date_added = models.DateTimeField(auto_now_add=True)
-    image = models.ImageField(upload_to='uploads/')
+    image = CloudinaryField('image')
 
     class Meta:
         ordering = ['-date_added']
 
     def __str__(self):
         return self.title
-

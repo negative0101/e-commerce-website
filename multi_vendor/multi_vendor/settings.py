@@ -1,5 +1,8 @@
 import os
 from pathlib import Path
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -93,9 +96,7 @@ USE_I18N = True
 
 USE_TZ = True
 
-
 BASE_DIR2 = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 
 STATIC_ROOT = os.path.join(BASE_DIR2, 'staticfiles')
 STATIC_URL = '/static/'
@@ -117,3 +118,10 @@ LOGOUT_REDIRECT_URL = 'frontpage'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media/'
+
+cloudinary.config(
+    cloud_name="hddpogror",
+    api_key="531884663832477",
+    api_secret="brcPmmfeEjjrPxtccjgV6CkVm4U",
+
+)
