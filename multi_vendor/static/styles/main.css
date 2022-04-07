@@ -8,13 +8,15 @@ main.css,
     min-height: 100% !important;
     height: 100%;
 }
-html{
+
+html {
     background-color: #5b258d;
 }
 
-.helptext{
-    color:floralwhite;
+.helptext {
+    color: floralwhite;
 }
+
 div .login-center {
     position: relative;
     left: 50%;
@@ -27,18 +29,20 @@ label {
 }
 
 body {
-background: #5C258D;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to bottom, #59b6d5, #5C258D);
-background: linear-gradient(to bottom, #55b2d3, #5C258D);
+    background: #5C258D; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #59b6d5, #5C258D);
+    background: linear-gradient(to bottom, #55b2d3, #5C258D);
 
 }
 
-td .a{
+td .a {
     color: #363636;
 }
-th,td{
+
+th, td {
     background: rgba(64, 65, 66, 0.35);
 }
+
 /*.footer {*/
 /*    ;*/
 
@@ -47,15 +51,16 @@ th,td{
 
 /*}*/
 
-div#footer{
-  position: fixed;
-  z-index: 1000000;
-  overflow: hidden;
-  bottom: 0;
-  left: 0;
-  height: 100px;
-  width: 600px;
+div#footer {
+    position: fixed;
+    z-index: 1000000;
+    overflow: hidden;
+    bottom: 0;
+    left: 0;
+    height: 100px;
+    width: 600px;
 }
+
 .footer {
     min-height: 50px;
     padding: 1px;
@@ -83,10 +88,10 @@ div#footer{
 .title {
     color: #ffffff;
 }
-h1,h2,h3{
+
+h1, h2, h3 {
     color: #ffffff;
 }
-
 
 
 .footer a {
@@ -206,16 +211,17 @@ h1,h2,h3{
 }
 
 a.promotion-btn {
-    color:white;
+    color: white;
     display: block;
     width: 100px;
     margin-left: auto;
     margin-right: auto;
 }
-p{
+
+p {
     color: white;
 }
 
-a{
-    color:white;
+a {
+    color: white;
 }

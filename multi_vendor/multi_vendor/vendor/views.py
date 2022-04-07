@@ -40,7 +40,8 @@ class CreateVendorView(views.View):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            vendor = Vendor.objects.create(name=user.username, created_by=user)
+
+            vendor = Vendor.objects.create(name=user.username, created_by=user) #create user in db to vendor
             return redirect('frontpage')
 
         return render(request, 'vendor/become_vendor.html', {'form': form})
