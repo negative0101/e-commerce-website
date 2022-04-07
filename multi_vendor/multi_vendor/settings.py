@@ -8,10 +8,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-nz!c_oe3n7c^cm@7s%7tt8qd*p3$4l0aixdop2i#woicqww710'
 
-DEBUG = os.getenv('DEBUG','False') == 'True'
-
-ALLOWED_HOSTS = ['127.0.0.1',
-                 'bigblackcat.herokuapp.com', ]
+DEBUG = os.getenv('DEBUG', 'False') == 'True'
+print(DEBUG)
+# DISABLE_COLLECTSTATIC =1
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(' ')
+print(ALLOWED_HOSTS)
 
 INSTALLED_APPS = [
     'django.contrib.admin',
