@@ -6,10 +6,10 @@ import cloudinary.api
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.getenv('SECRET_KEY')
-APP_ENVIRONMENT = os.getenv('APP_ENVIRONMENT', 'Development')
-DEBUG = os.getenv('DEBUG', 'False') == 'True'
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(' ')
+SECRET_KEY = 'django-insecure-nz!c_oe3n7c^cm@7s%7tt8qd*p3$4l0aixdop2i#woicqww710'
+
+DEBUG = True
+ALLOWED_HOSTS = ['localhost','127.0.0.1','bigblackcat.herokuapp.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -59,24 +59,19 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'multi_vendor.wsgi.application'
-if APP_ENVIRONMENT == 'Production':
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': os.getenv('DB_NAME'),
-            'USER': os.getenv('DB_USER'),
-            'PASSWORD': os.getenv('DB_PASSWORD'),
-            'HOST': os.getenv('DB_HOST'),
-            'PORT': '5432',
-        }
-    }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': 'db.sqlite3',
-        }
-    }
+
+DEFAULT_DATABASE_CONFIG = {
+    'ENGINE': 'django.db.backends.postgresql',
+    'NAME': 'd7obasm4lvmjsu',
+    'USER': 'hprartgirtsxjj',
+    'PASSWORD': 'b41f073d2eec16a24e5903871021d5df4f1a83b362aed8aa244d026d669e306c',
+    'HOST': 'ec2-34-247-72-29.eu-west-1.compute.amazonaws.com',
+    'PORT': '5432',
+}
+DATABASES = {
+    'default': DEFAULT_DATABASE_CONFIG
+
+}
 
 AUTH_PASSWORD_VALIDATORS = [
     {
