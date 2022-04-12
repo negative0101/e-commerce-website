@@ -4,13 +4,12 @@ from django.shortcuts import redirect, render, get_object_or_404
 import random
 from django import views
 from django.utils.text import slugify
-from django.views.generic import TemplateView, ListView
+
 
 from .forms import AddToCartForm, ProductForm, DeleteProductForm
 from .models import Category, Product
 from ..cart.cart import Cart
 from django.contrib.auth import mixins as auth_mixin
-
 
 MESSAGE_FOR_ADDING_PRODUCT_SUCCESS = "Product was added to basket!"
 NUMBER_OF_RANDOM_SIMILAR_ITEMS = 4
