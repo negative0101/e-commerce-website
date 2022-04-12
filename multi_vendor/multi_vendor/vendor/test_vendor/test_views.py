@@ -2,7 +2,6 @@ from django.contrib.auth import get_user_model
 from django.test import TestCase, Client
 from django.urls import reverse
 
-from multi_vendor.vendor.models import Vendor
 
 UserModel = get_user_model()
 
@@ -26,5 +25,7 @@ class TestVendorsView(TestCase):
         response = self.client.get(reverse('login'))
 
         self.assertEqual(response.status_code,200)
+        # self.assertTemplateUsed(response, 'vendor/login.html')
+
 
 

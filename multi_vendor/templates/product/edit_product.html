@@ -3,8 +3,17 @@
 {% block title %}Edit product {% endblock %}
 
 {% block content %}
-    <h1 class="title">Edit Product </h1>
-    <form method="post" action="." enctype="multipart/form-data">
+        <style>
+        input, textarea {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+        }
+
+    </style>
+    <h1 class="title has-text-centered">Edit Product </h1>
+    <form align="center" method="post" action="." enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p}}
 

@@ -86,7 +86,7 @@
             &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
 
             {% if request.user.is_authenticated %}
-                <a href="{% url 'vendor_admin' %}">Vendor Admin</a>
+                <a href="{% url 'vendor_admin' %}">Dashboard</a>
             {% else %}
                 <a href="{% url 'become_vendor' %}">Become vendor</a>
             {% endif %}

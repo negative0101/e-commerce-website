@@ -5,7 +5,7 @@ import cloudinary.uploader
 import cloudinary.api
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+BASE_DIR2 = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'django-insecure-nz!c_oe3n7c^cm@7s%7tt8qd*p3$4l0aixdop2i#woicqww710'
 
 DEBUG = True
@@ -27,7 +27,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
-
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -95,8 +94,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
-BASE_DIR2 = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 STATIC_ROOT = os.path.join(BASE_DIR2, 'staticfiles')
 STATIC_URL = '/static/'
